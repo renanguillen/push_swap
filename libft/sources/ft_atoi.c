@@ -6,16 +6,16 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:29:06 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/09/22 00:19:33 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/10 20:41:09 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-int	ft_atoi(const char *str)
+long int	ft_atoi(const char *str)
 {
-	int	nbr;
-	int	sign;
+	long int	nbr;
+	long int	sign;
 
 	nbr = 0;
 	sign = 1;

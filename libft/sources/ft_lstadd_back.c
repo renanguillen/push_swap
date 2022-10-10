@@ -6,21 +6,21 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 18:05:16 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/09/22 00:20:47 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/10 19:27:22 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *newlst)
+void	ft_lstadd_back(t_element **stack, t_element *new)
 {
-	t_list	*last;
+	t_element	*last;
 
-	if (!lst || !newlst)
+	if (!stack || !new)
 		return ;
-	last = ft_lstlast(*lst);
+	last = ft_lstlast(*stack);
 	if (last != NULL)
-		last->next = newlst;
+		last->next = new;
 	else
-		*lst = newlst;
+		*stack = new;
 }

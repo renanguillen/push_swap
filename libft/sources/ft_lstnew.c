@@ -6,20 +6,21 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 21:47:34 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/09/22 00:21:47 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/10 19:17:01 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_element	*ft_lstnew(int value, int stack_pos)
 {
-	t_list	*new;
+	t_element	*new;
 
-	new = (t_list *)malloc(sizeof(t_list));
+	new = (t_element *)malloc(sizeof(t_element));
 	if (!new)
 		return (NULL);
-	new->content = (void *)content;
+	new->value = value;
+	new->stack_pos = stack_pos;
 	new->next = NULL;
 	return (new);
 }

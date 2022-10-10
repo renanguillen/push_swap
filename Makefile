@@ -6,7 +6,11 @@ PATH_OBJS = ./objects/
 PATH_SRCS = ./sources/
 
 SRCS = $(addprefix $(PATH_SRCS),\
-		ft_push_swap.c)
+		ft_push_swap.c\
+		ft_entry_check.c\
+		ft_get_index.c\
+		ft_limits_check.c\
+		ft_error.c)
 
 OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))
 
@@ -30,6 +34,7 @@ $(LIBFT):
 
 clean:
 	@rm -rf $(PATH_OBJS)
+	@rm vgcore.*
 
 fclean: clean
 	@rm $(NAME)
@@ -52,6 +57,6 @@ git:
 
 vg:
 	@clear
-	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./push_swap 12 13 14
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./push_swap 12 135 14
 
 PHONY: all clean fclean re n git
