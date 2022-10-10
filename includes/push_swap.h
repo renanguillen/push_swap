@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:46:25 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/04 17:38:57 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:06:33 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,17 @@
 # define PUSH_SWAP_H
 
 # include "../libft/includes/libft.h"
+
+typedef struct s_element
+{
+	int					value;
+	int					index;
+	int					stack_pos;
+	int					target_pos;
+	int					top_a;
+	int					top_b;
+	struct s_element	*next;
+}	t_element;
 
 // sa (swap a): Swap the first 2 elements at the top of stack a.
 // Do nothing if there is only one or no elements.

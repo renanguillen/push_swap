@@ -40,6 +40,7 @@ re: fclean all
 n:
 	@clear
 	@norminette ./sources ./includes
+
 git:
 	@git status
 	@sleep 1 && echo 5 && sleep 1 && echo 4 && sleep 1 && echo 3 && sleep 1 && echo 2 && sleep 1 && echo 1 && sleep 2
@@ -48,5 +49,9 @@ git:
 	@git push
 	@clear
 	@git status
+
+vg:
+	@clear
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./push_swap 12 13 14
 
 PHONY: all clean fclean re n git
