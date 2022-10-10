@@ -13,7 +13,7 @@ OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))
 LIBFT = $(PATH_LIBS)libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -ggdb
 IFLAGS = -I $(PATH_INCS)
 
 all: $(NAME)
