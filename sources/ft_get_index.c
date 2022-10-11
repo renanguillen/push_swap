@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:54:48 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/10 21:01:52 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/11 21:19:57 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,23 @@ void	ft_get_index(t_element *a)
 {
 	t_element	*i;
 	t_element	*j;
-	int			count;
+	int			counter;
 
-	count = 0;
 	i = a;
 	while (i)
 	{
 		j = a;
-		count = 0;
+		counter = 0;
 		while (j)
 		{
 			if (i->value < j->value)
 				j->index++;
+			else if (i->value == j->value)
+			{
+				counter++;
+				if (counter == 2)
+					ft_error();
+			}
 			j = j->next;
 		}
 		i = i->next;
