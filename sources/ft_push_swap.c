@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:49:55 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/12 11:59:13 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/13 21:29:46 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@ void	ft_swap(t_element *stack)
 	t_element	*x;
 	t_element	*y;
 
-	x = stack;
-	y = stack->next->next;
-	stack = stack->next;
-	stack = x;
-	stack->next->next = y;
+	x->value = stack->value;
+	x->index = stack->index;
+	stack->value = stack->next->value;
+	stack->index = stack->next->index;
+	stack->next->value = x->value;
+	stack->next->index = x->index;
 }
 // void	ft_swap_three(t_element *stack)
 // {
