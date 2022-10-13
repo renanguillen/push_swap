@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_limits_check.c                                  :+:      :+:    :+:   */
+/*   ft_get_stack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 20:58:05 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/10 20:58:21 by ridalgo-         ###   ########.fr       */
+/*   Created: 2022/10/12 09:16:31 by ridalgo-          #+#    #+#             */
+/*   Updated: 2022/10/12 10:04:03 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_limits_check(char *argv)
+void	ft_get_stack(int argc, char**argv, t_element **stack_a)
 {
-	long int	ret;
+	int			position;
 
-	ret = ft_atoi(argv);
-	if ((ret > 2147483647) || (ret < -2147483648))
-		ft_error();
-	return ((int)ret);
+	position = 0;
+	--argc;
+	*stack_a = ft_lstnew(ft_input_check(*++argv), position++);
+	while (--argc)
+		ft_lstadd_back(stack_a,
+			ft_lstnew(ft_input_check(*++argv), position++));
 }
