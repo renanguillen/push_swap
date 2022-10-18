@@ -10,9 +10,14 @@ SRCS = $(addprefix $(PATH_SRCS),\
 		ft_get_index.c\
 		ft_get_stack.c\
 		ft_input_check.c\
-		ft_error.c)\
+		ft_error.c\
+		ft_define_swap.c\
+		ft_swap_two.c\
+		ft_swap_three.c\
+		ft_swap_more.c)\
 		$(addprefix $(PATH_SRCS)operations/,\
-		ft_swap.c)
+		ft_swap.c\
+		ft_rrotate.c)
 
 OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))
 

@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_swap_two.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 17:00:32 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/18 17:51:33 by ridalgo-         ###   ########.fr       */
+/*   Created: 2022/10/18 16:33:12 by ridalgo-          #+#    #+#             */
+/*   Updated: 2022/10/18 17:50:56 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-void	ft_swap(t_element **stack, char c)
+void	ft_swap_two(t_element **stack)
 {
-	t_element	*aux;
-
-	aux = (*stack)->next;
-	(*stack)->next = (*stack)->next->next;
-	aux->next = *stack;
-	*stack = aux;
-	(*stack)->position = 0;
-	(*stack)->next->position = 1;
-	ft_printf("s%c", c);
+	if ((*stack)->index < (*stack)->next->index)
+		exit(EXIT_SUCCESS);
+	else
+		ft_swap(stack, 'a');
 }

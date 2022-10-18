@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_define_swap.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 17:00:32 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/18 17:51:33 by ridalgo-         ###   ########.fr       */
+/*   Created: 2022/10/18 16:32:40 by ridalgo-          #+#    #+#             */
+/*   Updated: 2022/10/18 16:32:48 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-void	ft_swap(t_element **stack, char c)
+void	ft_define_swap(int argc, t_element **stack)
 {
-	t_element	*aux;
-
-	aux = (*stack)->next;
-	(*stack)->next = (*stack)->next->next;
-	aux->next = *stack;
-	*stack = aux;
-	(*stack)->position = 0;
-	(*stack)->next->position = 1;
-	ft_printf("s%c", c);
+	if (argc == 3)
+		ft_swap_two(stack);
+	else if (argc == 4)
+		ft_swap_three(stack);
+	else
+		ft_swap_more(stack);
 }
