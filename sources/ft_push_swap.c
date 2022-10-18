@@ -6,20 +6,30 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:49:55 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/15 17:00:27 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/18 16:18:02 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// void	ft_swap_three(t_element *stack)
-// {
-// 	if	(stack)
-// }
+void	ft_swap_more(t_element **stack)
+{
+	return ;
+}
+
+void	ft_swap_three(t_element **stack)
+{
+	if ((*stack)->index < (*stack)->next->index &&
+		(*stack)->next->index < (*stack)->next->next->index)
+		exit(EXIT_SUCCESS);
+	else if ((*stack)->index > (*stack)->next->index &&
+		(*stack)->next->index < (*stack)->next->next->index)
+	
+}
 
 void	ft_swap_two(t_element **stack)
 {
-	if ((*stack)->value < (*stack)->next->value)
+	if ((*stack)->index < (*stack)->next->index)
 		exit(EXIT_SUCCESS);
 	else
 		ft_swap(stack);
@@ -30,9 +40,9 @@ void	ft_define_swap(int argc, t_element **stack)
 	if (argc == 3)
 		ft_swap_two(stack);
 	else if (argc == 4)
-		return ;
+		ft_swap_three(stack);
 	else
-		return ;
+		ft_swap_more(stack);
 }
 
 int	main(int argc, char **argv)

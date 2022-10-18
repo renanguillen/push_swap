@@ -11,7 +11,7 @@ SRCS = $(addprefix $(PATH_SRCS),\
 		ft_get_stack.c\
 		ft_input_check.c\
 		ft_error.c)\
-		$(addprefix $(PATH_SRCS)operations,\
+		$(addprefix $(PATH_SRCS)operations/,\
 		ft_swap.c)
 
 OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))
@@ -29,7 +29,7 @@ $(NAME): $(OBJS) $(LIBFT)
 
 $(PATH_OBJS)%.o: $(PATH_SRCS)%.c
 	@mkdir -p $(PATH_OBJS)
-	@mkdir -p $(PATH_OBJS)operations
+	@mkdir -p $(PATH_OBJS)operations/
 	$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
 $(LIBFT):
