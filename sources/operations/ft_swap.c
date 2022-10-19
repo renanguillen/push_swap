@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:00:32 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/18 17:51:33 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/19 16:05:50 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	ft_swap(t_element **stack, char c)
 	*stack = aux;
 	(*stack)->position = 0;
 	(*stack)->next->position = 1;
-	ft_printf("s%c", c);
+	ft_printf("s%c\n", c);
 }
