@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:34:08 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/20 15:18:31 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/20 15:22:46 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	ft_swap_more(t_element **stack_a)
 		else
 			ft_rotate(stack_a, 'a');
 	}
+	ft_printf("Cut:%d\n", cut_index);
 	ft_print_stacks(stack_a, stack_b);
 	return ;
 }
