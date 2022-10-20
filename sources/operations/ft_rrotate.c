@@ -6,13 +6,13 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:48:04 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/20 11:21:12 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/20 13:28:59 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	ft_rrotate(t_element **stack)
+static void	rrotate(t_element **stack)
 {
 	t_element	*aux;
 	t_element	*top;
@@ -33,4 +33,18 @@ void	ft_rrotate(t_element **stack)
 	(*stack) = top;
 	(*stack)->position = 0;
 	bot->next = NULL;
+}
+
+void	ft_rrotate(t_element **stack, char c)
+{
+	if (c == 'a')
+	{
+		rrotate(stack);
+		ft_printf("rra\n");
+	}
+	if (c == 'b')
+	{
+		rrotate(stack);
+		ft_printf("rrb\n");
+	}
 }

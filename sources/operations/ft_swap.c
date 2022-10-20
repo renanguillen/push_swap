@@ -6,13 +6,13 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 17:00:32 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/20 11:11:22 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/20 13:26:51 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	ft_swap(t_element **stack)
+static void	swap(t_element **stack)
 {
 	t_element	*aux;
 
@@ -22,4 +22,18 @@ void	ft_swap(t_element **stack)
 	*stack = aux;
 	(*stack)->position = 0;
 	(*stack)->next->position = 1;
+}
+
+void	ft_swap(t_element **stack, char c)
+{
+	if (c == 'a')
+	{
+		swap(stack);
+		ft_printf("sa\n");
+	}
+	if (c == 'b')
+	{
+		swap(stack);
+		ft_printf("sb\n");
+	}
 }
