@@ -1,44 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rrotate.c                                       :+:      :+:    :+:   */
+/*   ft_rotate.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 17:48:04 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/20 10:12:28 by ridalgo-         ###   ########.fr       */
+/*   Created: 2022/10/20 10:29:07 by ridalgo-          #+#    #+#             */
+/*   Updated: 2022/10/20 10:56:30 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	ft_rrotate(t_element **stack, char c)
+void	ft_rotate(t_element **stack, char c)
 {
 	t_element	*aux;
-	t_element	*top;
 	t_element	*bot;
-	// t_element	*print;
+
 	aux = *stack;
-	while (aux->next->next)
-		aux = aux->next;
-	bot = aux;
-	aux = *stack;
-	while (aux->next)
+	bot = *stack;
+	while (bot->next)
 	{
-		aux->position++;
-		aux = aux->next;
+		bot = bot->next;
+		bot->position--;
 	}
-	top = aux;
-	top->next = (*stack);
-	(*stack) = top;
-	(*stack)->position = 0;
-	bot->next = NULL;
-	ft_printf("rr%c\n", c);
-	// print = *stack;
-	// while (print)
-	// {
-	// 	ft_printf("%d:%d - index:%d\n",
-	// 		print->position, print->value, print->index);
-	// 	print = print->next;
-	// }
+	*stack = (*stack)->next;
+	bot->next = aux;
+	aux->position = bot->position + 1;
+	aux->next = NULL;
+	ft_printf("r%c\n", c);
 }

@@ -17,6 +17,7 @@ SRCS = $(addprefix $(PATH_SRCS),\
 		ft_swap_more.c)\
 		$(addprefix $(PATH_SRCS)operations/,\
 		ft_swap.c\
+		ft_rotate.c\
 		ft_rrotate.c)
 
 OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))
