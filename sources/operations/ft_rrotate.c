@@ -6,18 +6,18 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:48:04 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/20 10:12:28 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/20 11:21:12 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void	ft_rrotate(t_element **stack, char c)
+void	ft_rrotate(t_element **stack)
 {
 	t_element	*aux;
 	t_element	*top;
 	t_element	*bot;
-	// t_element	*print;
+
 	aux = *stack;
 	while (aux->next->next)
 		aux = aux->next;
@@ -33,12 +33,4 @@ void	ft_rrotate(t_element **stack, char c)
 	(*stack) = top;
 	(*stack)->position = 0;
 	bot->next = NULL;
-	ft_printf("rr%c\n", c);
-	// print = *stack;
-	// while (print)
-	// {
-	// 	ft_printf("%d:%d - index:%d\n",
-	// 		print->position, print->value, print->index);
-	// 	print = print->next;
-	// }
 }
