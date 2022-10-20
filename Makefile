@@ -6,19 +6,20 @@ PATH_OBJS = ./objects/
 PATH_SRCS = ./sources/
 
 SRCS = $(addprefix $(PATH_SRCS),\
-		ft_push_swap.c\
+		ft_define_swap.c\
+		ft_error.c\
 		ft_get_index.c\
 		ft_get_stack.c\
 		ft_input_check.c\
-		ft_error.c\
-		ft_define_swap.c\
-		ft_swap_two.c\
+		ft_push_swap.c\
+		ft_swap_more.c\
 		ft_swap_three.c\
-		ft_swap_more.c)\
+		ft_swap_two.c)\
 		$(addprefix $(PATH_SRCS)operations/,\
-		ft_swap.c\
+		ft_push.c\
 		ft_rotate.c\
-		ft_rrotate.c)
+		ft_rrotate.c\
+		ft_swap.c)
 
 OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))
 

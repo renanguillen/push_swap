@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_swap.c                                     :+:      :+:    :+:   */
+/*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 20:49:55 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/20 14:14:52 by ridalgo-         ###   ########.fr       */
+/*   Created: 2022/10/20 14:03:59 by ridalgo-          #+#    #+#             */
+/*   Updated: 2022/10/20 15:18:09 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-int	main(int argc, char **argv)
+static void	push(t_element **src, t_element **dst)
 {
-	t_element	*stack;
+	t_element	*aux;
 
-	if (argc < 3)
-		return (EXIT_FAILURE);
-	else
+	if (*src == NULL)
+		return ;
+	aux = (*src)->next;
+	(*src)->next = *dst;
+	*dst = *src;
+	*src = aux;
+}
+
+void	ft_push(t_element **stack_a, t_element **stack_b, char c)
+{
+	if (c == 'a')
 	{
-		ft_get_stack(argc, argv, &stack);
-		ft_get_index(stack);
-		ft_define_swap(argc, &stack);
+		push(stack_a, stack_b);
+		ft_printf("pa\n");
 	}
-	return (EXIT_SUCCESS);
+	if (c == 'b')
+	{
+		push(stack_b, stack_a);
+		ft_printf("pb\n");
+	}
 }

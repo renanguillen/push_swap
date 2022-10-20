@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:46:25 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/20 13:30:18 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/20 14:11:36 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ int		ft_input_check(char *argv);
 void	ft_define_swap(int argc, t_element **stack);
 void	ft_swap_two(t_element **stack);
 void	ft_swap_three(t_element **stack);
-void	ft_swap_more(t_element **stack);
+void	ft_swap_more(t_element **stack_a);
 
-void	ft_swap(t_element **stack, char c);
+void	ft_push(t_element **stack_a, t_element **stack_b, char c);
 void	ft_rotate(t_element **stack, char c);
 void	ft_rrotate(t_element **stack, char c);
+void	ft_swap(t_element **stack, char c);
 
 #endif
