@@ -10,6 +10,7 @@ SRCS = $(addprefix $(PATH_SRCS),\
 		ft_get_index.c\
 		ft_get_position.c\
 		ft_get_stack.c\
+		ft_get_target.c\
 		ft_input_check.c\
 		ft_push_swap.c)\
 		$(addprefix $(PATH_SRCS)operations/,\
