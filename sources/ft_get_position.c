@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_stack.c                                     :+:      :+:    :+:   */
+/*   ft_get_position.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 09:16:31 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/21 15:10:00 by ridalgo-         ###   ########.fr       */
+/*   Created: 2022/10/21 15:26:16 by ridalgo-          #+#    #+#             */
+/*   Updated: 2022/10/21 15:26:34 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_get_stack(int argc, char**argv, t_element **stack_a)
+void	ft_get_position(t_element **stack)
 {
+	t_element	*aux;
+	int			position;
 
-	--argc;
-	*stack_a = ft_lstnew(ft_input_check(*++argv));
-	while (--argc)
-		ft_lstadd_back(stack_a,
-			ft_lstnew(ft_input_check(*++argv)));
+	position = 0;
+	aux = *stack;
+	while (aux)
+	{
+		aux->position = position++;
+		aux = aux->next;
+	}
 }

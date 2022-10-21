@@ -6,13 +6,13 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 21:47:34 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/12 10:07:16 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:08:39 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-t_element	*ft_lstnew(int value, int stack_pos)
+t_element	*ft_lstnew(int value)
 {
 	t_element	*new;
 
@@ -20,7 +20,6 @@ t_element	*ft_lstnew(int value, int stack_pos)
 	if (!new)
 		return (NULL);
 	new->value = value;
-	new->position = stack_pos;
 	new->next = NULL;
 	return (new);
 }

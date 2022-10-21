@@ -6,20 +6,22 @@ PATH_OBJS = ./objects/
 PATH_SRCS = ./sources/
 
 SRCS = $(addprefix $(PATH_SRCS),\
-		ft_define_swap.c\
 		ft_error.c\
 		ft_get_index.c\
+		ft_get_position.c\
 		ft_get_stack.c\
 		ft_input_check.c\
-		ft_push_swap.c\
-		ft_swap_more.c\
-		ft_swap_three.c\
-		ft_swap_two.c)\
+		ft_push_swap.c)\
 		$(addprefix $(PATH_SRCS)operations/,\
 		ft_push.c\
 		ft_rotate.c\
 		ft_rrotate.c\
-		ft_swap.c)
+		ft_swap.c)\
+		$(addprefix $(PATH_SRCS)algorithms/,\
+		ft_define_swap.c\
+		ft_swap_more.c\
+		ft_swap_three.c\
+		ft_swap_two.c)
 
 OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))
 
@@ -37,6 +39,7 @@ $(NAME): $(OBJS) $(LIBFT)
 $(PATH_OBJS)%.o: $(PATH_SRCS)%.c
 	@mkdir -p $(PATH_OBJS)
 	@mkdir -p $(PATH_OBJS)operations/
+	@mkdir -p $(PATH_OBJS)algorithms/
 	$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
 $(LIBFT):

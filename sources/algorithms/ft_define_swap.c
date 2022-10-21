@@ -6,11 +6,11 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:32:40 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/18 16:32:48 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:28:35 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	ft_define_swap(int argc, t_element **stack)
 {

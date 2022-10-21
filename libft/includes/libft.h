@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 00:10:22 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/10 20:14:52 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:09:13 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void		ft_lstclear(t_list **lst, void (*del)(void*));
 void		ft_lstdelone(t_list *lst, void (*del)(void*));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_element	*ft_lstlast(t_element *element);
-t_element	*ft_lstnew(int value, int stack_pos);
+t_element	*ft_lstnew(int value);
 int			ft_lstsize(t_list *lst);
 void		ft_matrixfree(void **matrix);
 void		*ft_memchr(const void *s, int c, size_t n);

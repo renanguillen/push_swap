@@ -6,27 +6,23 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:34:08 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/21 15:00:32 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:28:28 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-static void	ft_print_stacks(t_element **stack_a, t_element *stack_b)
+static void	ft_print_stack(t_element **stack, char c)
 {
-	ft_printf("STACK A\n");
-	while (*stack_a)
+	t_element	*aux_a;
+
+	aux_a = *stack;
+	ft_printf("STACK %c\n", c);
+	while (aux_a)
 	{
 		ft_printf("%d:%d - index:%d\n",
-			(*stack_a)->position, (*stack_a)->value, (*stack_a)->index);
-		(*stack_a) = (*stack_a)->next;
-	}
-	ft_printf("STACK B\n");
-	while (stack_b)
-	{
-		ft_printf("%d:%d - index:%d\n",
-			stack_b->position, stack_b->value, stack_b->index);
-		stack_b = stack_b->next;
+			(aux_a)->position, (aux_a)->value, (aux_a)->index);
+		(aux_a) = (aux_a)->next;
 	}
 }
 
@@ -54,7 +50,10 @@ void	ft_swap_more(t_element **stack_a)
 			ft_rotate(stack_a, 'a');
 	}
 	ft_swap_three(stack_a);
+	ft_get_position(stack_a);
+	ft_get_position(&stack_b);
 	ft_printf("Cut:%d\n", cut_index);
-	ft_print_stacks(stack_a, stack_b);
+	ft_print_stack(stack_a, 'A');
+	ft_print_stack(&stack_b, 'B');
 	return ;
 }
