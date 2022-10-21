@@ -7,6 +7,7 @@ PATH_SRCS = ./sources/
 
 SRCS = $(addprefix $(PATH_SRCS),\
 		ft_error.c\
+		ft_first_send.c\
 		ft_get_index.c\
 		ft_get_position.c\
 		ft_get_stack.c\

@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_define_swap.c                                   :+:      :+:    :+:   */
+/*   ft_first_send.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 16:32:40 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/21 17:50:43 by ridalgo-         ###   ########.fr       */
+/*   Created: 2022/10/21 17:56:34 by ridalgo-          #+#    #+#             */
+/*   Updated: 2022/10/21 17:57:44 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-void	ft_define_swap(int argc, t_element **stack)
+void	ft_first_send(t_element **stack_a, t_element **stack_b, int quant)
 {
-	if (argc == 3)
-		ft_swap_two(stack);
-	else if (argc == 4)
-		ft_swap_three(stack);
-	else
-		ft_swap_more(stack, argc);
+	int			counter;
+
+	quant /= 2;
+	counter = 3;
+	while ((*stack_a)->next->next->next)
+	{
+		if (counter)
+		{
+			if ((*stack_a)->index < quant)
+				ft_push(stack_a, stack_b, 'a');
+			else
+			{
+				ft_rotate(stack_a, 'a');
+				counter--;
+			}
+		}
+		else
+			ft_push(stack_a, stack_b, 'a');
+	}
 }
