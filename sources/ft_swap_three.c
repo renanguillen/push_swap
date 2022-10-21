@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:33:37 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/20 13:30:26 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:05:25 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	ft_swap_three(t_element **stack)
 {
 	if ((*stack)->index < (*stack)->next->index
 		&& (*stack)->next->index < (*stack)->next->next->index)
-		exit(EXIT_SUCCESS);
+		return ;
 	else if ((*stack)->index < (*stack)->next->index
 		&& (*stack)->index < (*stack)->next->next->index
 		&& (*stack)->next->index > (*stack)->next->next->index)

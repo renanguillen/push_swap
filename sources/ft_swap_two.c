@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:33:12 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/18 17:50:56 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/21 15:05:16 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_swap_two(t_element **stack)
 {
 	if ((*stack)->index < (*stack)->next->index)
-		exit(EXIT_SUCCESS);
+		return ;
 	else
 		ft_swap(stack, 'a');
 }
