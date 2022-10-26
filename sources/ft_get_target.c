@@ -6,11 +6,30 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 16:37:41 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/21 16:37:50 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:02:47 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+static int	exception(t_element **stack, int closest)
+{
+	t_element	*aux;
+	int			target;
+
+	target = 0;
+	aux = *stack;
+	while (aux)
+	{
+		if (aux->index < closest)
+		{
+			closest = aux->index;
+			target = aux->position;
+		}
+		aux = aux->next;
+	}
+	return (target);
+}
 
 static int	stack_comparison(t_element **stack, int b_index)
 {
@@ -33,19 +52,7 @@ static int	stack_comparison(t_element **stack, int b_index)
 	if (closest != 2147483647)
 		return (target);
 	else
-	{
-		aux = *stack;
-		while (aux)
-		{
-			if (aux->index < closest)
-			{
-				closest = aux->index;
-				target = aux->position;
-			}
-			aux = aux->next;
-		}
-	}
-	return (target);
+		return (exception(stack, closest));
 }
 
 void	ft_get_target(t_element **stack_a, t_element **stack_b)

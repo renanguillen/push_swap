@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 09:16:31 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/21 15:10:00 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:53:19 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	ft_get_stack(int argc, char**argv, t_element **stack_a)
 {
-
 	--argc;
 	*stack_a = ft_lstnew(ft_input_check(*++argv));
 	while (--argc)

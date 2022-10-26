@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 21:47:34 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/21 16:03:20 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:50:40 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_element	*ft_lstnew(int value)
 	if (!new)
 		return (NULL);
 	new->value = value;
+	new->position = 0;
 	new->target = 0;
 	new->next = NULL;
 	return (new);
