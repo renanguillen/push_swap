@@ -6,22 +6,22 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:54:48 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/18 15:52:26 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/11/28 18:31:06 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_get_index(t_element *stack)
+void	ft_get_index(t_element **stack)
 {
 	t_element	*i;
 	t_element	*j;
 	int			counter;
 
-	i = stack;
+	i = *stack;
 	while (i)
 	{
-		j = stack;
+		j = *stack;
 		counter = 0;
 		while (j)
 		{

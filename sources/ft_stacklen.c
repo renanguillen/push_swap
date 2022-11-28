@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_define_swap.c                                   :+:      :+:    :+:   */
+/*   ft_count_stack.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 16:32:40 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/11/28 18:36:17 by ridalgo-         ###   ########.fr       */
+/*   Created: 2022/11/28 18:34:58 by ridalgo-          #+#    #+#             */
+/*   Updated: 2022/11/28 18:36:10 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-void	ft_define_swap(t_element **stack)
+int	ft_stacklen(t_element **stack)
 {
-	int count;
+	int	i;
+	t_element *aux;
 
-	count = ft_stacklen(stack);
-	if (count == 2)
-		ft_swap_two(stack);
-	else if (count == 3)
-		ft_swap_three(stack);
-	else
-		ft_swap_more(stack, count);
+	aux = *stack;
+	i = 0;
+	while (aux)
+	{
+		i++;
+		aux = aux->next;
+	}
+	return (i);
 }

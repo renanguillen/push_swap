@@ -14,6 +14,7 @@ SRCS = $(addprefix $(PATH_SRCS),\
 		ft_get_target.c\
 		ft_input_check.c\
 		ft_print_stack.c\
+		ft_stacklen.c\
 		ft_push_swap.c)\
 		$(addprefix $(PATH_SRCS)operations/,\
 		ft_push.c\
