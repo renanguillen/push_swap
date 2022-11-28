@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:58:05 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/19 17:06:01 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/11/28 18:18:21 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_input_check(char *argv)
 	long int	ret;
 
 	ret = ft_atoi(argv);
-	if ((ret > 2147483647) || (ret < -2147483648))
+	if ((ret > MAX_INT) || (ret < MIN_INT))
 		ft_error();
 	return ((int)ret);
 }

@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:46:25 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/11/28 18:11:57 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/11/28 18:19:36 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # define MAX_INT 2147483647
+# define MIN_INT -2147483648
 
 # include "../libft/includes/libft.h"
 
