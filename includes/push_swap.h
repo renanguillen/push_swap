@@ -6,12 +6,14 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:46:25 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/21 17:57:03 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/11/28 18:11:57 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+
+# define MAX_INT 2147483647
 
 # include "../libft/includes/libft.h"
 
@@ -22,6 +24,7 @@ void	ft_get_position(t_element **stack);
 void	ft_get_stack(int argc, char**argv, t_element **a);
 void	ft_get_target(t_element **stack_a, t_element **stack_b);
 int		ft_input_check(char *argv);
+void	ft_print_stack(t_element **stack, char c);
 
 void	ft_define_swap(int argc, t_element **stack);
 void	ft_swap_two(t_element **stack);

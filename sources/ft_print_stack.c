@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_more.c                                     :+:      :+:    :+:   */
+/*   ft_print_stack.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 16:34:08 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/11/28 17:34:14 by ridalgo-         ###   ########.fr       */
+/*   Created: 2022/11/28 17:33:44 by ridalgo-          #+#    #+#             */
+/*   Updated: 2022/11/28 17:35:38 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../includes/push_swap.h"
 
-void	ft_swap_more(t_element **stack_a, int argc)
+void	ft_print_stack(t_element **stack, char c)
 {
-	t_element	*stack_b;
+	t_element	*aux;
 
-	stack_b = NULL;
-	ft_first_send(stack_a, &stack_b, (argc - 1));
-	ft_swap_three(stack_a);
-	ft_get_target(stack_a, &stack_b);
-	ft_print_stack(stack_a, 'A');
-	ft_print_stack(&stack_b, 'B');
-	return ;
+	aux = *stack;
+	ft_printf("STACK %c\n", c);
+	while (aux)
+	{
+		ft_printf("%d-Value:%d - Index:%d - Target:%d\n",
+			(aux)->position, (aux)->value, (aux)->index, (aux)->target);
+		(aux) = (aux)->next;
+	}
 }

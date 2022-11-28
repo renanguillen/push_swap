@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 16:37:41 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/24 15:02:47 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/11/28 18:12:03 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	stack_comparison(t_element **stack, int b_index)
 	int			closest;
 	int			target;
 
-	closest = 2147483647;
+	closest = MAX_INT;
 	target = 0;
 	aux = *stack;
 	while (aux)
@@ -49,7 +49,7 @@ static int	stack_comparison(t_element **stack, int b_index)
 		}
 		aux = aux->next;
 	}
-	if (closest != 2147483647)
+	if (closest != MAX_INT)
 		return (target);
 	else
 		return (exception(stack, closest));
