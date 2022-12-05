@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:32:40 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/05 11:47:19 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/05 11:57:09 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_define_swap(t_element **stack)
 {
-	int count;
+	int	count;
 
 	count = ft_stacklen(stack);
 	if (count == 2)

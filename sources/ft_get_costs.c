@@ -6,29 +6,29 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 11:44:53 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/05 11:47:10 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/05 11:55:34 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void ft_get_costs(int stackLenght_a, t_element **stack)
+void	ft_get_costs(int stack_lenght_a, t_element **stack_b)
 {
-	int	stackLenght_b;
-	t_element	*auxStack;
+	int			stack_lenght_b;
+	t_element	*aux_stack;
 
-	stackLenght_b = ft_stacklen(stack);
-	auxStack = *stack;
-	while (auxStack)
+	stack_lenght_b = ft_stacklen(stack_b);
+	aux_stack = *stack_b;
+	while (aux_stack)
 	{
-		if (auxStack->position <= (stackLenght_b / 2))
-			auxStack->top_b = auxStack->position;
+		if (aux_stack->position <= (stack_lenght_b / 2))
+			aux_stack->top_b = aux_stack->position;
 		else
-			auxStack->top_b = auxStack->position - stackLenght_b;
-		if (auxStack->target <=  (stackLenght_a / 2))
-			auxStack->top_a = auxStack->target;
+			aux_stack->top_b = aux_stack->position - stack_lenght_b;
+		if (aux_stack->target <= (stack_lenght_a / 2))
+			aux_stack->top_a = aux_stack->target;
 		else
-			auxStack->top_a = auxStack->target - stackLenght_a;
-		auxStack = auxStack->next;
+			aux_stack->top_a = aux_stack->target - stack_lenght_a;
+		aux_stack = aux_stack->next;
 	}
 }
