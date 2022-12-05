@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 10:29:07 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/05 11:43:30 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/05 11:59:54 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,22 @@ static void	rotate(t_element **stack)
 	aux->next = NULL;
 }
 
-void	ft_rotate(t_element **stack, char c)
+void	ft_rotate(t_element **stack_a, t_element **stack_b, char c)
 {
 	if (c == 'a')
 	{
-		rotate(stack);
+		rotate(stack_a);
 		ft_printf("ra\n");
 	}
 	if (c == 'b')
 	{
-		rotate(stack);
+		rotate(stack_b);
 		ft_printf("rb\n");
+	}
+	if (c == 'r')
+	{
+		rotate(stack_a);
+		rotate(stack_b);
+		ft_printf("rr\n");
 	}
 }

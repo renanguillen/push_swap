@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:46:25 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/05 11:52:59 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/05 12:17:44 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ int		ft_stacklen(t_element **stack);
 void	ft_print_stack(t_element **stack, char c);
 
 void	ft_define_swap(t_element **stack);
-void	ft_swap_two(t_element **stack);
-void	ft_swap_three(t_element **stack);
-void	ft_swap_more(t_element **stack_a, int stack_lenght_a);
+void	ft_swap_two(t_element **stack_a, t_element **stack_b);
+void	ft_swap_three(t_element **stack_a, t_element **stack_b);
+void	ft_swap_more(t_element **stack_a, t_element **stack_b, int stack_lenght_a);
 
 void	ft_push(t_element **stack_a, t_element **stack_b, char c);
-void	ft_rotate(t_element **stack, char c);
-void	ft_rrotate(t_element **stack, char c);
+void	ft_rotate(t_element **stack_a, t_element **stack_b, char c);
+void	ft_rrotate(t_element **stack_a, t_element **stack_b, char c);
 void	ft_swap(t_element **stack, char c);
 
 #endif
