@@ -14,7 +14,7 @@
 
 void	ft_define_swap(t_element **stack_a)
 {
-	int	len_a;
+	int			len_a;
 	t_element	*stack_b;
 
 	stack_b = NULL;
