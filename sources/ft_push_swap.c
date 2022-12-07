@@ -12,6 +12,11 @@
 
 #include "../includes/push_swap.h"
 
+void	ft_free_memory(t_element **stack)
+{
+
+}
+
 int	main(int argc, char **argv)
 {
 	t_element	*stack;
@@ -23,6 +28,7 @@ int	main(int argc, char **argv)
 		ft_get_stack(argc, argv, &stack);
 		ft_get_index(&stack);
 		ft_define_swap(&stack);
+		ft_free_memory(&stack);
 	}
 	return (EXIT_SUCCESS);
 }
