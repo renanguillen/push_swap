@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:49:55 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/05 12:03:02 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/07 20:06:05 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 void	ft_free_memory(t_element **stack)
 {
+	t_element	*auxiliary;
 
+	if (!*stack)
+		return;
+	while (*stack)
+	{
+		auxiliary = (*stack)->next;
+		free(*stack);
+		*stack = auxiliary;
+	}
+	*stack = NULL;
 }
 
 int	main(int argc, char **argv)
