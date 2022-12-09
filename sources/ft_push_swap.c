@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:49:55 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/08 11:00:50 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/08 11:40:51 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ void	ft_is_sorted(t_element **stack)
 	auxiliary = *stack;
 	while (auxiliary->next)
 	{
-		if (auxiliary->next->value > auxiliary->value)
+		if (auxiliary->next->value < auxiliary->value)
 			return ;
 		auxiliary = auxiliary->next;
 	}
-	ft_error();
+	exit (EXIT_SUCCESS);
 }
 
 int	main(int argc, char **argv)
