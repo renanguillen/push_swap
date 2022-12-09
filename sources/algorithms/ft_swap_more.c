@@ -6,17 +6,17 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:34:08 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/09 17:40:02 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/09 17:48:43 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-static void	ft_final_rotation(t_element **stack_a, t_element **stack_b, int middle)
+static void	ft_final_rotation(t_element **stack_a, t_element **stack_b, int mid)
 {
 	int	direction;
 
-	if ((*stack_a)->index < middle)
+	if ((*stack_a)->index < mid)
 		direction = 0;
 	else
 		direction = 1;

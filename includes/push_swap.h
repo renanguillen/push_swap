@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:46:25 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/06 20:29:23 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/09 17:47:05 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	ft_execute_swap(t_element **stack_a, t_element **stack_b, int position);
 void	ft_get_position(t_element **stack);
 void	ft_get_stack(int argc, char**argv, t_element **a);
 void	ft_get_target(t_element **stack_a, t_element **stack_b);
+void	ft_free_memory(t_element **stack);
+void	ft_is_sorted(t_element **stack);
 int		ft_input_check(char *argv);
 int		ft_stacklen(t_element **stack);
 void	ft_print_stack(t_element **stack, char c);
