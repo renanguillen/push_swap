@@ -18,7 +18,6 @@ SRCS = $(addprefix $(PATH_SRCS),\
 		ft_free_memory.c\
 		ft_input_check.c\
 		ft_is_sorted.c\
-		ft_print_stack.c\
 		ft_stacklen.c\
 		ft_push_swap.c)\
 		$(addprefix $(PATH_SRCS)operations/,\

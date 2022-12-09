@@ -6,54 +6,54 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:24:38 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/09 17:38:53 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/09 18:01:17 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void	rotate_a(t_element **stack_a, t_element **stack_b, t_element *auxiliary)
+static void	rotate_a(t_element **stack_a, t_element **stack_b, t_element *aux)
 {
-	while (auxiliary->top_a)
+	while (aux->top_a)
 	{
-		if (auxiliary->top_a > 0)
+		if (aux->top_a > 0)
 		{
-			if (auxiliary->top_b > 0)
+			if (aux->top_b > 0)
 			{
 				ft_rotate(stack_a, stack_b, 'r');
-				auxiliary->top_b--;
+				aux->top_b--;
 			}
 			else
 				ft_rotate(stack_a, stack_b, 'a');
-			auxiliary->top_a--;
+			aux->top_a--;
 		}
-		else if (auxiliary->top_a < 0)
+		else if (aux->top_a < 0)
 		{
-			if (auxiliary->top_b < 0)
+			if (aux->top_b < 0)
 			{
 				ft_rrotate(stack_a, stack_b, 'r');
-				auxiliary->top_b++;
+				aux->top_b++;
 			}
 			else
 				ft_rrotate(stack_a, stack_b, 'a');
-			auxiliary->top_a++;
+			aux->top_a++;
 		}
 	}
 }
 
-static void	rotate_b(t_element **stack_a, t_element **stack_b, t_element *auxiliary)
+static void	rotate_b(t_element **stack_a, t_element **stack_b, t_element *aux)
 {
-	while (auxiliary->top_b)
+	while (aux->top_b)
 	{
-		if (auxiliary->top_b > 0)
+		if (aux->top_b > 0)
 		{
 			ft_rotate(stack_a, stack_b, 'b');
-			auxiliary->top_b--;
+			aux->top_b--;
 		}
-		else if (auxiliary->top_b < 0)
+		else if (aux->top_b < 0)
 		{
 			ft_rrotate(stack_a, stack_b, 'b');
-			auxiliary->top_b++;
+			aux->top_b++;
 		}
 	}
 }
