@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:49:55 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/09 17:59:43 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/09 18:18:07 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	ft_nostack(int argc, char **argv)
 
 	i = 0;
 	if (argc == 1)
-		ft_error();
+		exit(EXIT_FAILURE);
 	else
 	{
 		while (argv[1][i])
