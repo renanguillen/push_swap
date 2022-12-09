@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 20:24:38 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/06 20:43:57 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/09 17:38:53 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ static void	rotate_a(t_element **stack_a, t_element **stack_b, t_element *auxili
 		if (auxiliary->top_a > 0)
 		{
 			if (auxiliary->top_b > 0)
+			{
 				ft_rotate(stack_a, stack_b, 'r');
+				auxiliary->top_b--;
+			}
 			else
 				ft_rotate(stack_a, stack_b, 'a');
 			auxiliary->top_a--;
@@ -27,7 +30,10 @@ static void	rotate_a(t_element **stack_a, t_element **stack_b, t_element *auxili
 		else if (auxiliary->top_a < 0)
 		{
 			if (auxiliary->top_b < 0)
+			{
 				ft_rrotate(stack_a, stack_b, 'r');
+				auxiliary->top_b++;
+			}
 			else
 				ft_rrotate(stack_a, stack_b, 'a');
 			auxiliary->top_a++;

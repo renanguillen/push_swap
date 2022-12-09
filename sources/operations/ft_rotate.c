@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 10:29:07 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/05 11:59:54 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/09 16:54:29 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,9 @@ static void	rotate(t_element **stack)
 	aux = *stack;
 	bot = *stack;
 	while (bot->next)
-	{
 		bot = bot->next;
-		bot->position--;
-	}
 	*stack = (*stack)->next;
 	bot->next = aux;
-	aux->position = bot->position + 1;
 	aux->next = NULL;
 }
 
