@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 14:03:59 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/10/20 15:18:09 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/09 16:31:51 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ void	ft_push(t_element **stack_a, t_element **stack_b, char c)
 	if (c == 'a')
 	{
 		push(stack_a, stack_b);
-		ft_printf("pa\n");
+		ft_printf("pb\n");
 	}
 	if (c == 'b')
 	{
 		push(stack_b, stack_a);
-		ft_printf("pb\n");
+		ft_printf("pa\n");
 	}
 }
