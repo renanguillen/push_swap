@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/26 21:47:34 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/12 11:54:13 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/14 16:11:48 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_element	*ft_lstnew(int value)
 {
 	t_element	*new;
 
-	new = (t_element *)malloc(sizeof(t_element));
+	new = (t_element *)ft_calloc(1, sizeof(t_element));
 	if (!new)
 		return (NULL);
 	new->value = value;
