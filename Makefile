@@ -78,7 +78,7 @@ git:
 
 vg:
 	@clear
-	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./push_swap 12 135 14
+	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./push_swap  33 44 51 30 29 4 7 13 2 10 45 50 39 46 59 76 31
 	@rm vgcore.*
 
 PHONY: all clean fclean re n git
