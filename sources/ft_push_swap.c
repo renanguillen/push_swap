@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:49:55 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/12 11:41:48 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/15 13:55:49 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	main(int argc, char **argv)
 	else
 	{
 		ft_get_stack(argc, argv, &stack);
-		ft_is_sorted(&stack);
 		ft_get_index(&stack);
+		ft_is_sorted(&stack);
 		ft_define_swap(&stack);
 		ft_free_memory(&stack);
 	}

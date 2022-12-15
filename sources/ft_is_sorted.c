@@ -6,7 +6,7 @@
 /*   By: ridalgo- <ridalgo-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:46:42 by ridalgo-          #+#    #+#             */
-/*   Updated: 2022/12/09 17:46:53 by ridalgo-         ###   ########.fr       */
+/*   Updated: 2022/12/15 13:56:56 by ridalgo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ void	ft_is_sorted(t_element **stack)
 			return ;
 		auxiliary = auxiliary->next;
 	}
+	ft_free_memory(stack);
 	exit (EXIT_SUCCESS);
 }
