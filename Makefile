@@ -36,7 +36,7 @@ OBJS = $(patsubst $(PATH_SRCS)%.c, $(PATH_OBJS)%.o, $(SRCS))
 LIBFT = $(PATH_LIBS)libft.a
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -ggdb
+CFLAGS = -Wall -Wextra -Werror
 IFLAGS = -I $(PATH_INCS)
 
 all: $(NAME)
@@ -75,10 +75,5 @@ git:
 	@git push
 	@clear
 	@git status
-
-vg:
-	@clear
-	@valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./push_swap  33 44 51 30 29 4 7 13 2 10 45 50 39 46 59 76 31
-	@rm vgcore.*
 
 PHONY: all clean fclean re n git
